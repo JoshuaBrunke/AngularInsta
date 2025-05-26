@@ -1,41 +1,39 @@
 import { Component } from '@angular/core';
+import { Router, RouterModule } from '@angular/router';
 
-@Component({
-  selector: 'app-main-page',
-  imports: [],
-  templateUrl: './main-page.component.html',
-  styleUrl: './main-page.component.scss'
-})
-export class MainPageComponent {
-
-}
-
-interface Post {
+interface Posts {
   name: string;
   image: string;
   likes: number;
 }
 
-posts = [
+@Component({
+  selector: 'app-main-page',
+  standalone: true,
+  imports: [RouterModule],
+  templateUrl: './main-page.component.html',
+  styleUrl: './main-page.component.scss'
+})
+export class MainPageComponent {
+posts: Posts[] = [
   {
     name: "Hans",
-    image: "/assets/img/banana.jpg",
+    image: "../assets/img/banana.jpg",
     likes: 9,
-  };
+  },
     {
     name: "Helene",
-    image: "/assets/img/currant.jpg",
+    image: "../assets/img/currant.jpg",
     likes: 4,
-  };
-    {
-    name: "Mandy",
-    image: "/assets/img/orange.jpg",
-    likes: 2,
-  };
+  },
     {
     name: "Herbert",
-    image: "/assets/img/currant.jpg",
-    likes: 5,
-  };
+    image: "../assets/img/orange.jpg",
+    likes: 2,
+  },
   
 ]
+}
+
+
+
