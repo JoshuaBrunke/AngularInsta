@@ -5,7 +5,7 @@ interface Posts {
   name: string;
   image: string;
   likes: number;
-  isLiked?: boolean;
+  isLiked: boolean;
 }
 
 @Component({

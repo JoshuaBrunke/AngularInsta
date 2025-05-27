@@ -4,6 +4,10 @@
     <p>{{post.name}}</p>
     <img class="image" src="{{post.image}}" alt="{{post.name}}" />
     <p>Likes: {{post.likes}}</p>
-    <img class ="like-button" src="assets/img/heart-black.png" alt="Like" (click)="likePost(post)" />
-}
+    @if(post.isLiked) {
+        <img class ="like-button" src="../assets/img/heart-red.png" alt="Like" (click)="likePost(post)" />
+    } @else {
+    <img class ="like-button" src="../assets/img/heart-black.png" alt="Like" (click)="likePost(post)" />
+} }
+
 
