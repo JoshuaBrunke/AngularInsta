@@ -41,10 +41,12 @@ posts: Posts[] = [
 likePost(post: Posts) {
   if (!post.isLiked) {
     post.likes++;
+    post.isLiked = true;
   } else {
     post.likes--;
+    post.isLiked = false;
   }
-  post.isLiked;
+  
 }
 
 }
