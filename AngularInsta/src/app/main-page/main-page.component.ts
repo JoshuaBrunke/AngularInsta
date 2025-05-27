@@ -5,6 +5,7 @@ interface Posts {
   name: string;
   image: string;
   likes: number;
+  isLiked?: boolean;
 }
 
 @Component({
@@ -20,16 +21,19 @@ posts: Posts[] = [
     name: "Hans",
     image: "../assets/img/banana.jpg",
     likes: 9,
+    isLiked: false,
   },
     {
     name: "Helene",
     image: "../assets/img/currant.jpg",
     likes: 4,
+    isLiked: false,
   },
     {
     name: "Herbert",
     image: "../assets/img/orange.jpg",
     likes: 2,
+    isLiked: false,
   },
   
 ]
