@@ -37,7 +37,15 @@ posts: Posts[] = [
   },
   
 ]
+
+likePost(post: Posts) {
+  if (!post.isLiked) {
+    post.likes++;
+  } else {
+    post.likes--;
+  }
+  post.isLiked;
 }
 
-
+}
 
