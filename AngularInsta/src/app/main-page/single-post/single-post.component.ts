@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { Posts } from '../main-page.component'; // Importing the Posts interface
 
 @Component({
   selector: 'app-single-post',
@@ -9,4 +11,15 @@ import { Component } from '@angular/core';
 })
 export class SinglePostComponent {
 
+  @Input() singlepost!: Posts; // Using the Posts interface for single post input
+
+    likePost(singlepost: Posts) {
+    if (!singlepost.isLiked) {
+      singlepost.likes++;
+      singlepost.isLiked = true;
+    } else {
+      singlepost.likes--;
+      singlepost.isLiked = false;
+    }
+  }
 }

@@ -1,14 +1,8 @@
 <h1>AngularInsta</h1>
 
 @for (post of posts; track $index) {
-    <p>{{post.name}}</p>
-    <img class="image" src="{{post.image}}" alt="{{post.name}}" />
-    <p>Likes: {{post.likes}}</p>
-    @if(post.isLiked) {
-        <img class ="like-button" src="../assets/img/heart-red.png" alt="Like" (click)="likePost(post)" />
-    } @else {
-    <img class ="like-button" src="../assets/img/heart-black.png" alt="Like" (click)="likePost(post)" />
-} }
+    <app-single-post [singlepost]="post"></app-single-post>
+    }
 
 
 <a routerLink="contact">Contact</a>

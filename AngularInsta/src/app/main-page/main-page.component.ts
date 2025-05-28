@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
+import { SinglePostComponent } from './single-post/single-post.component';
 
-interface Posts {
+export interface Posts {
   name: string;
   image: string;
   likes: number;
@@ -11,7 +12,7 @@ interface Posts {
 @Component({
   selector: 'app-main-page',
   standalone: true,
-  imports: [RouterModule],
+  imports: [RouterModule, SinglePostComponent],
   templateUrl: './main-page.component.html',
   styleUrl: './main-page.component.scss',
 })
@@ -37,13 +38,5 @@ export class MainPageComponent {
     },
   ];
 
-  likePost(post: Posts) {
-    if (!post.isLiked) {
-      post.likes++;
-      post.isLiked = true;
-    } else {
-      post.likes--;
-      post.isLiked = false;
-    }
-  }
+
 }
