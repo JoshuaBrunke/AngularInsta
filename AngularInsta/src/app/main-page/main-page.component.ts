@@ -7,7 +7,7 @@ export interface Posts {
   image: string;
   likes: number;
   isLiked: boolean;
-  comments: string[];
+  comments?: string[];
 }
 
 @Component({
