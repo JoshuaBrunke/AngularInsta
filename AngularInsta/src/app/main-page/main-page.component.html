@@ -1,8 +1,11 @@
 <h1>AngularInsta</h1>
 
 @for (post of posts; track $index) {
-    <app-single-post [singlepost]="post"></app-single-post>
-    }
+<app-single-post 
+  [singlepost]="post" 
+  (newpost)="addComment($event, post)">
+</app-single-post>
 
+}
 
 <a routerLink="contact">Contact</a>

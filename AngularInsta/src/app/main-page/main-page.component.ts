@@ -42,5 +42,10 @@ export class MainPageComponent {
     },
   ];
 
+addComment(comment: string, post: Posts) {
+  if (comment.trim()) {
+    post.comments?.push(comment);
+  }
+}
 
 }
