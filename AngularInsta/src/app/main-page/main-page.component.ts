@@ -7,6 +7,7 @@ export interface Posts {
   image: string;
   likes: number;
   isLiked: boolean;
+  comments: string[];
 }
 
 @Component({
@@ -23,18 +24,21 @@ export class MainPageComponent {
       image: '../assets/img/banana.jpg',
       likes: 9,
       isLiked: false,
+      comments: ["Bananas are peak!", "I was here"],
     },
     {
       name: 'Helene',
       image: '../assets/img/currant.jpg',
       likes: 4,
       isLiked: false,
+      comments: ["First", "Save 20% on CURRANT SUPERFOOD CAPSULES now!"],
     },
     {
       name: 'Herbert',
       image: '../assets/img/orange.jpg',
       likes: 2,
       isLiked: false,
+      comments: ["I hate peeling those things", "Pretty!"],
     },
   ];
 
